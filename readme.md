@@ -6,10 +6,10 @@ _master branch contain logging and other branches contain other technology which
 
 <br>
 
-**Logging**
+**Sentry**
 
 _refs:_
  
-https://docs.python.org/3.6/howto/logging.html
-https://docs.djangoproject.com/en/2.0/topics/logging/
+https://docs.sentry.io/clients/python/integrations/django/
+
 

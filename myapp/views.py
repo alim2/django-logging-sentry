@@ -1,7 +1,7 @@
-import logging
 from django.shortcuts import render, HttpResponse
+from raven.contrib.django.raven_compat.models import client
 
 
 def index(request):
-    logging.getLogger('logger_name').error("it's error")
+    client.captureException()
     return HttpResponse('hi')

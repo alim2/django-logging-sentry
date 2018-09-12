@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+import raven
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -35,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'raven.contrib.django.raven_compat',
     'myapp',
 ]
 
@@ -114,8 +116,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
-try:
-    from .logging_settings import *
-except Exception as ex:
-    pass
+RAVEN_CONFIG = {
+    'dsn': 'https://f82fd1fd614c46a88b75ca2ae9aa5e2b:b56906b724ed4913a6108a3ecbab33e0@sentry.io/1279579',
+    # If you are using git, you can also automatically configure the
+    # release based on the git info.
+    # 'release': raven.fetch_git_sha(os.path.abspath(os.pardir)),
+}

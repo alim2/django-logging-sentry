@@ -122,3 +122,10 @@ RAVEN_CONFIG = {
     # release based on the git info.
     # 'release': raven.fetch_git_sha(os.path.abspath(os.pardir)),
 }
+
+MIDDLEWARE = ['raven.contrib.django.raven_compat.middleware.Sentry404CatchMiddleware'] + MIDDLEWARE
+
+try:
+    from .logger_settings import *
+except Exception as ex:
+    pass

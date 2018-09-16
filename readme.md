@@ -13,3 +13,5 @@ _refs:_
 https://docs.python.org/3.6/howto/logging.html
 https://docs.djangoproject.com/en/2.0/topics/logging/
 
+
+**Sentry -->:** https://github.com/alim2/django-logging-sentry/tree/sentry

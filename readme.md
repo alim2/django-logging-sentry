@@ -13,4 +13,4 @@ _refs:_
 https://docs.sentry.io/clients/python/integrations/django/
 
 
-**Sentry -->:** https://github.com/alim2/django-logging-sentry/tree/sentry
+**Logging -->:** https://github.com/alim2/django-logging-sentry/tree/master
